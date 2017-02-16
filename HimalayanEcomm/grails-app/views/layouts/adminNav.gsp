@@ -12,7 +12,11 @@
     <link href="${request.contextPath}/themesadmin/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="${request.contextPath}/themesadmin/css/jquery.gritter.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <g:layoutHead/>
 </head>
+
 <body>
 
 <!--Header-part-->
@@ -113,5 +117,6 @@
         document.gomenu.selector.selectedIndex = 2;
     }
 </script>
+<r:layoutResources/>
 </body>
 </html>
