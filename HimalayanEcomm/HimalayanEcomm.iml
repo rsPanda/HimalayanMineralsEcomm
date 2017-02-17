@@ -69,5 +69,6 @@
     </orderEntry>
     <orderEntry type="module" module-name="HimalayanEcomm-grailsPlugins" />
     <orderEntry type="library" name="grails-2.2.3" level="application" />
+    <orderEntry type="library" name="grails-2.2.3" level="application" />
   </component>
 </module>

@@ -12,4 +12,8 @@ class AdminController {
     def adminMain(){
 
     }
+
+    def upload(){
+
+    }
 }

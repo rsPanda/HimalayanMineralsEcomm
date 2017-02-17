@@ -65,4 +65,12 @@ class SubCategoryService {
         }
     }
 
+    def subCategoryByCategory(def cat){
+        Category category = Category.findByNameAndDeleted(cat, false);
+        println "category = $category"
+        def subCategory = SubCategory.findAllByCategoryAndDeleted(category, false).name
+        println "subCategory = $subCategory"
+        return subCategory
+    }
+
 }

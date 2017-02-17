@@ -10,11 +10,14 @@ class Product {
     double price
     int availableQuantity
     int totalQuantity
-    String photo
+    byte[] photo
     String availability
     boolean isDeleted
 
     static belongsTo = [subCategory:SubCategory, category:Category]
 
+    static constraints = {
+        photo(nullable:true, maxSize: 1024 * 1024 * 2 /* 2MB */)
+    }
 }
 

@@ -10,6 +10,24 @@
         $(document).ready(function(){
             console.log("here >>>>>>>>>>>>>")
 
+            $("#catDropdown").change(function(){
+                var cat = $('#catDropdown').val();
+                console.log("cat ============== " + cat)
+                $.ajax({
+                    type : "post",
+                    data : {category: cat},
+                    url : "${g.createLink(controller:'product',action:'subcat')}",
+                    success : function (data){
+
+                        console.log("on success")
+                        console.log(data)
+                        $("#subCatSelect").html('');
+                        $("#subCatSelect").html(data);
+                    }
+                });
+
+
+            });
             %{--$('#username').blur(function(){--}%
             %{--console.log("inside blur")--}%
             %{--var user = $('#username').val();--}%
@@ -67,20 +85,20 @@
                             </div>
                             <div class="control-group">
                                 <label for="normal" class="control-label">Sub Category</label>
-                                <div class="controls">
+                                <div id="subCatSelect" class="controls">
                                     <g:select name="subCategory"  from="${subCategory}" class="form-control"></g:select>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label for="normal" class="control-label">Code</label>
                                 <div class="controls">
-                                    <input type="text" id="mask-phone" class="span8 mask text">
+                                    <input type="text" id="mask-phone" class="span8 mask text" name="code">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label for="normal" class="control-label">Name</label>
                                 <div class="controls">
-                                    <input type="text" id="mask-phoneExt" class="span8 mask text">
+                                    <input type="text" id="mask-phoneExt" class="span8 mask text" name="name">
                                 </div>
                             </div>
                             %{--<div class="control-group">--}%
@@ -92,7 +110,7 @@
                             <div class="control-group">
                                 <label for="normal" class="control-label">Description</label>
                                 <div class="controls">
-                                    <textarea class="textarea_editor span8" rows="6" placeholder="Enter text ..."></textarea>
+                                    <textarea class="textarea_editor span8" rows="6" name="desc" placeholder="Enter text ..."></textarea>
                                 </div>
                             </div>
 
@@ -100,31 +118,37 @@
                             <div class="control-group">
                                 <label for="normal" class="control-label">Price</label>
                                 <div class="controls">
-                                    <input type="text" id="mask-ssn" class="span8 mask text">
+                                    <input type="text" id="mask-ssn" class="span8 mask text" name="price">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label for="normal" class="control-label">Total Quantity</label>
                                 <div class="controls">
-                                    <input type="text" id="mask-productKey" class="span8 mask text">
+                                    <input type="text" id="mask-productKey" class="span8 mask text" name="totalQty">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label for="normal" class="control-label">Available Quantity</label>
                                 <div class="controls">
-                                    <input type="text" id="mask-date" class="span8 mask text">
+                                    <input type="text" id="mask-date" class="span8 mask text" name="availableQty">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="controls">
-
-
                                     <label>
-                                        <input type="radio" name="radios" />
-                                        Available</label>
-                                    <label>
-                                        <input type="radio" name="radios" />
-                                        Out Of Stock</label>
+                                    <g:radioGroup name="availability"
+                                                  labels="['Available', 'Out of Stock']"
+                                                values="['Available', 'Out of Stock']">
+
+                                        <p>${it.label}: ${it.radio}</p>
+                                    </g:radioGroup>
+                                    </label>
+                                    %{--<label>--}%
+                                        %{--<input type="radio" name="radios" />--}%
+                                        %{--Available</label>--}%
+                                    %{--<label>--}%
+                                        %{--<input type="radio" name="radios" />--}%
+                                        %{--Out Of Stock</label>--}%
                                 </div>
                                 </div>
                             %{--<div class="control-group">--}%
@@ -138,7 +162,7 @@
                             <div class="control-group">
                                 <label for="normal" class="control-label">Add Picture</label>
                                 <div class="controls">
-                                    <input type="file"/>
+                                    <input type="file" name="file"/>
                                 </div>
                             </div>
 
