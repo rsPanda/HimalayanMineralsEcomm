@@ -84,7 +84,7 @@
                                 <div class="span9">
                                 </div>
                                 <button type="submit" class="btn btn-success">Save</button>
-                                <a href="index.html" class="btn btn-danger">Cancel</a>
+                                <a href="${createLink(controller: 'subCategory',action: 'viewSubCategory')}" class="btn btn-danger">Cancel</a>
                             </div>
                         </g:form>
                     </div>

@@ -53,8 +53,8 @@
                 <li><a href="${createLink(controller: 'subCategory',action: 'viewSubCategory')}">Sub-Category</a></li>
             </ul>
         </li>
-        <li><a href="#"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>
-        <li><a href="all_product.html"><i class="icon icon-pencil"></i> <span>All Product</span></a></li>
+        %{--<li><a href="#"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>--}%
+        <li><a href="${createLink(controller: 'product',action: 'viewProduct')}"><i class="icon icon-pencil"></i> <span>All Product</span></a></li>
 
     </ul>
 </div>
@@ -79,19 +79,19 @@
 <script src="${request.contextPath}/themesadmin/js/jquery.flot.resize.min.js"></script>
 <script src="${request.contextPath}/themesadmin/js/jquery.peity.min.js"></script>
 <script src="${request.contextPath}/themesadmin/js/fullcalendar.min.js"></script>
-%{--<script src="${request.contextPath}/themesadmin/js/matrix.js"></script>--}%
-%{--<script src="${request.contextPath}/themesadmin/js/matrix.dashboard.js"></script>--}%
+<script src="${request.contextPath}/themesadmin/js/matrix.js"></script>
+<script src="${request.contextPath}/themesadmin/js/matrix.dashboard.js"></script>
 <script src="${request.contextPath}/themesadmin/js/jquery.gritter.min.js"></script>
-%{--<script src="${request.contextPath}/themesadmin/js/matrix.interface.js"></script>--}%
-%{--<script src="${request.contextPath}/themesadmin/js/matrix.chat.js"></script>--}%
+<script src="${request.contextPath}/themesadmin/js/matrix.interface.js"></script>
+<script src="${request.contextPath}/themesadmin/js/matrix.chat.js"></script>
 <script src="${request.contextPath}/themesadmin/js/jquery.validate.js"></script>
-%{--<script src="${request.contextPath}/themesadmin/js/matrix.form_validation.js"></script>--}%
+<script src="${request.contextPath}/themesadmin/js/matrix.form_validation.js"></script>
 <script src="${request.contextPath}/themesadmin/js/jquery.wizard.js"></script>
 <script src="${request.contextPath}/themesadmin/js/jquery.uniform.js"></script>
 <script src="${request.contextPath}/themesadmin/js/select2.min.js"></script>
-%{--<script src="${request.contextPath}/themesadmin/js/matrix.popover.js"></script>--}%
+<script src="${request.contextPath}/themesadmin/js/matrix.popover.js"></script>
 <script src="${request.contextPath}/themesadmin/js/jquery.dataTables.min.js"></script>
-%{--<script src="${request.contextPath}/themesadmin/js/matrix.tables.js"></script>--}%
+<script src="${request.contextPath}/themesadmin/js/matrix.tables.js"></script>
 
 <script type="text/javascript">
     // This function is called from the pop-up menus to transfer to

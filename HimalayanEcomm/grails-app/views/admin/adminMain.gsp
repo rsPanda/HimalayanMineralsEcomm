@@ -99,7 +99,7 @@
                     </div>
 
                 </div>
-                <li class="bg_ly"> <a href="view_all_products.html"> <i class="icon-list-ul"></i> View Product List</a> </li>
+                <li class="bg_ly"> <a href="${createLink(controller: 'product',action: 'viewProduct')}"> <i class="icon-list-ul"></i> View Product List</a> </li>
             </ul>
         </div>
     </div>

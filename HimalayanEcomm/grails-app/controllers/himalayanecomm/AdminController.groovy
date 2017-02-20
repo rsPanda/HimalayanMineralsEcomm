@@ -7,7 +7,7 @@ class AdminController {
 
     def index() { }
 
-    def Login(){}
+    def adminLogin(){}
 
     def validateUser(){
         def uname=params?.username
@@ -24,7 +24,7 @@ class AdminController {
             }
             else
             {
-                render (view: "Login", model: [access:"false"])
+                render (view: "adminLogin", model: [access:"false"])
             }
         }
 
