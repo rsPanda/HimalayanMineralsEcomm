@@ -38,7 +38,7 @@
                 <td>${(pro.code)}</td>
                 <td>${(pro.name)}</td>
                 <td>${pro.description}</td>
-                <td>${pro.photo}</td>
+                <td><img src="${createLink(controller:'product', action:'showImage', id: "${pro.id}")}" width='300'/></td>
                 %{--<td><a href="${createLink(controller:'category' ,action:'updateCategory',params: [categoryID:cat.id ])}">Edit</a> / <a href="${createLink(controller:'category' ,action:'deleteCategory',params: [categoryID:cat.id ])}">Delete</a> </td>--}%
             </tr>
         </g:each>

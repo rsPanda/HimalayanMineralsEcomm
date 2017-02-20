@@ -18,9 +18,11 @@ class ProductService {
         product.name=params?.name
         product.description=params?.desc
         product.price=Double.parseDouble(params?.price)
-        product.availableQuantity=params?.availableQty
-        product.totalQuantity=params?.totalQty
-        product.photo=params?.file
+        product.availableQuantity=Integer.parseInt(params?.availableQty)
+        product.totalQuantity=Integer.parseInt(params?.totalQty)
+//        def uploadedPic = params.photo
+//        product.photo=uploadedPic.getBytes()
+        product.photo=params.photo
         product.availability=params?.availability
         product.category=category
         product.subCategory=subCategory

@@ -76,7 +76,7 @@
 
                     </div>
                     <div class="widget-content nopadding">
-                        <form action="insertProduct" class="form-horizontal">
+                        <form action="insertProduct" class="form-horizontal" enctype="multipart/form-data">
                             <div class="control-group">
                                 <label for="normal" class="control-label">Category</label>
                                 <div class="controls">
@@ -162,7 +162,7 @@
                             <div class="control-group">
                                 <label for="normal" class="control-label">Add Picture</label>
                                 <div class="controls">
-                                    <input type="file" name="file"/>
+                                    <input type="file" name="photo" id="photo"/>
                                 </div>
                             </div>
 

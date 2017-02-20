@@ -39,6 +39,15 @@ class ProductController {
 
     }
 
+    def showImage() {
+        println "params = $params"
+        def productInstance = Product.findByIdAndIsDeleted(params?.id.toLong(),false)
+        println "productInstance = $productInstance.photo"
+// write the image to the output stream
+        response.outputStream << productInstance.photo
+//        response.outputStream.flush()
+    }
+
 //    def showImage(){
 //        Product product=Product.list()
 //        println "product = $product"
@@ -46,7 +55,7 @@ class ProductController {
 //    }
 
     def viewProduct(){
-        Product product=Product.createCriteria().list {
+        def product=Product.createCriteria().list {
             eq('isDeleted',false)
         }
         println "product = $product"
